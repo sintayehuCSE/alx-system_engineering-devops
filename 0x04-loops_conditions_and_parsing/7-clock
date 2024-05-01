@@ -12,6 +12,6 @@ do
 	echo "$min"
 	(( min++ ))
     done
-    (( min-=min ))
+    (( min-=58 ))
     (( hour++ ))
 done
