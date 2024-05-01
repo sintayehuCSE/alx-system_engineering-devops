@@ -441,6 +441,7 @@ sylvain@ubuntu$
   * File: `9-to_file_or_not_to_file`
 
 ### 10. FizzBuzz
+
 Write a Bash script that displays numbers from 1 to 100.
 **Requirements:**
   * Displays `FizzBuzz` when the number is a multiple of 3 and 5
