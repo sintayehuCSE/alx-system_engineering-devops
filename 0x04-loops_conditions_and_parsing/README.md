@@ -61,11 +61,11 @@ At the end of this project, you are expected to be able to [explain to anyone](h
 Examples:
 Not passing `Shellcheck:`
 
-![](https://github.com/sintayehuCSE/alx-system_engineering-devops/blob/master/0x04-loops_conditions_and_parsing/docs/shellcheck_fail.JPG)
+![check fail](docs/shellcheck_fail.JPG)
 
 Passing `Shellcheck:`
 
-![](https://github.com/sintayehuCSE/alx-system_engineering-devops/blob/master/0x04-loops_conditions_and_parsing/docs/shellcheck_pass.JPG)
+![check pass](docs/shellcheck_pass.JPG)
 
 For every feedback, Shellcheck will provide a code that you can use to get more information about the issue, for example for code `SC2034`, you can browse [SC2034](https://github.com/koalaman/shellcheck/wiki/SC2034).
 
