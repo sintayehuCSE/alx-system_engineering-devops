@@ -274,3 +274,205 @@ sylvain@ubuntu$
   * GitHub repository: `alx-system_engineering-devops`
   * Directory: `0x04-loops_conditions_and_parsing`
   * File: `6-superstitious_numbers`
+
+### 7. Clock
+Write a Bash script that displays the time for 12 hours and 59 minutes:
+
+  * display hours from 0 to 12
+  * display minutes from 1 to 59
+**Requirements:**
+  * You must use the `while` loop (`for` and `until` are forbidden)
+Note that in this example, we only display the first 70 lines using the `head` command.
+```
+sylvain@ubuntu$ ./7-clock | head -n 70
+Hour: 0
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+Hour: 1
+1
+2
+3
+4
+5
+6
+7
+8
+9
+sylvain@ubuntu$
+```
+**Repo:**
+  * GitHub repository: `alx-system_engineering-devops`
+  * Directory: `0x04-loops_conditions_and_parsing`
+  * File: `7-clock`
+
+### 8. For ls
+Write a Bash script that displays:
+  * The content of the current directory
+  * In a list format
+  * Where only the part of the name after the first dash is displayed (refer to the example)
+
+**Requirements:**
+  * You must use the `for` loop (`while` and `until` are forbidden)
+  * Do not display hidden files
+```
+sylvain@ubuntu$ ls
+100-read_and_cut              1-for_best_school         6-superstitious_numbers
+101-tell_the_story_of_passwd  2-while_best_school       7-clock
+102-lets_parse_apache_logs    3-until_best_school       8-for_ls
+103-dig_the-data              4-if_9_say_hi                  9-to_file_or_not_to_file
+10-fizzbuzz                   5-4_bad_luck_8_is_your_chance
+sylvain@ubuntu$  ./8-for_ls
+read_and_cut
+tell_the_story_of_passwd
+lets_parse_apache_logs
+dig_the-data
+fizzbuzz
+for_best_school
+while_best_school
+until_best_school
+if_9_say_hi
+4_bad_luck_8_is_your_chance
+superstitious_numbers
+clock
+for_ls
+to_file_or_not_to_file
+sylvain@ubuntu$
+```
+**Repo:**
+  * GitHub repository: `alx-system_engineering-devops`
+  * Directory: `0x04-loops_conditions_and_parsing`
+  * File: `8-for_ls`
+
+### 9. To file, or not to file
+Write a Bash script that gives you information about the `school` file.
+
+**Requirements:**
+  * You must use if and, else (case is forbidden)
+  * Your Bash script should check if the file exists and print:
+    * if the file exists: school file exists
+    * if the file does not exist: school file does not exist
+  * If the file exists, print:
+    * if the file is empty: school file is empty
+    * if the file is not empty: school file is not empty
+    * if the file is a regular file: school is a regular file
+    * if the file is not a regular file: (nothing)
+```
+sylvain@ubuntu$ file school
+school: cannot open `school' (No such file or directory)
+sylvain@ubuntu$ ./9-to_file_or_not_to_file 
+school file does not exist
+sylvain@ubuntu$ touch school
+sylvain@ubuntu$ ./9-to_file_or_not_to_file 
+school file exists
+school file is empty
+school is a regular file
+sylvain@ubuntu$ echo 'betty' > school 
+sylvain@ubuntu$ ./9-to_file_or_not_to_file 
+school file exists
+school file is not empty
+school is a regular file
+sylvain@ubuntu$ rm school 
+sylvain@ubuntu$ mkdir school
+sylvain@ubuntu$ ./9-to_file_or_not_to_file 
+school file exists
+school file is not empty
+sylvain@ubuntu$
+```
+**Repo:**
+  * GitHub repository: `alx-system_engineering-devops`
+  * Directory: `0x04-loops_conditions_and_parsing`
+  * File: `9-to_file_or_not_to_file`
+
+### 10. FizzBuzz
+Write a Bash script that displays numbers from 1 to 100.
+**Requirements:**
+  * Displays `FizzBuzz` when the number is a multiple of 3 and 5
+  * Displays `Fizz` when the number is multiple of 3
+  * Displays `Buzz` when the number is a multiple of 5
+  * Otherwise, displays the number
+  * In a list format
+```
+sylvain@ubuntu$ ./10-fizzbuzz | head -20
+1
+2
+Fizz
+4
+Buzz
+Fizz
+7
+8
+Fizz
+Buzz
+11
+Fizz
+13
+14
+FizzBuzz
+16
+17
+Fizz
+19
+Buzz
+sylvain@ubuntu$
+```
+**Repo:**
+  * GitHub repository: `alx-system_engineering-devops`
+  * Directory: `0x04-loops_conditions_and_parsing`
+  * File: `10-fizzbuzz`
