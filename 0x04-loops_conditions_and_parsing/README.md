@@ -127,3 +127,51 @@ sylvain@ubuntu$
   * GitHub repository: `alx-system_engineering-devops`
   * Directory: `0x04-loops_conditions_and_parsing`
   * File: `1-for_best_school`
+
+### 2. While Best School loop
+Write a Bash script that displays `Best School` 10 times.
+
+**Requirements:**
+  * You must use the `while` loop (`for` and `until` are forbidden)
+```
+sylvain@ubuntu$ ./2-while_best_school
+Best School
+Best School
+Best School
+Best School
+Best School
+Best School
+Best School
+Best School
+Best School
+Best School
+sylvain@ubuntu$
+```
+**Repo:**
+  * GitHub repository: `alx-system_engineering-devops`
+  * Directory: `0x04-loops_conditions_and_parsing`
+  * File: `2-while_best_school`
+
+### 3. Until Best School loop
+Write a Bash script that displays `Best School` 10 times.
+
+**Requirements:**
+  * You must use the `until` loop (`for` and `while` are forbidden)
+```
+sylvain@ubuntu$ ./3-until_best_school
+Best School
+Best School
+Best School
+Best School
+Best School
+Best School
+Best School
+Best School
+Best School
+Best School
+sylvain@ubuntu$
+```
+**Repo:**
+  * GitHub repository: alx-system_engineering-devops
+  * Directory: 0x04-loops_conditions_and_parsing
+  * File: 3-until_best_school
