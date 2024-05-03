@@ -614,3 +614,65 @@ sylvain@ubuntu$
   * GitHub repository: `alx-system_engineering-devops`
   * Directory: `0x04-loops_conditions_and_parsing`
   * File: `101-tell_the_story_of_passwd`
+
+### 13. Let's parse Apache logs
+![Apache Logs](images/parse_apache_logs.jpg)
+
+[Apache](https://en.wikipedia.org/wiki/Apache_HTTP_Server) is among the most popular web servers in the world, serving 50% of all active websites, no doubt that you will have to interact with it within your career. As a Full-Stack Software Engineer, you have to master the art of parsing log files. Today we will do a simple parsing of `Apache log access files`. Today the Customer Support department reported that a user reported that the site is being “buggy”. Not being a detailed description, you want to have a look at the Apache logs and gather data about the traffic. Write a Bash script that displays the visitor IP along with the [HTTP status code](https://en.wikipedia.org/wiki/List_of_HTTP_status_codes) from the Apache log file.
+
+**Requirement**:
+  * Format: `IP` `HTTP_CODE`
+    * in a list format
+    * See example
+  * You must use `awk`
+  * You are not allowed to use `while`, `for`, `until` and `cut`
+  * Download and commit the [apache-access.log](https://github.com/sintayehuCSE/alx-system_engineering-devops/blob/master/0x04-loops_conditions_and_parsing/apache-access.log) file along with your answers files
+```
+sylvain@ubuntu$ ./102-lets_parse_apache_logs | tail -n 10
+185.130.5.207 301
+185.130.5.207 301
+91.224.140.223 200
+62.210.142.23 304
+92.222.20.166 304
+180.76.15.19 200
+2.1.201.36 304
+198.58.99.82 304
+50.116.30.23 304
+209.133.111.211 200
+sylvain@ubuntu$
+```
+**Repo**:
+  * GitHub repository: `alx-system_engineering-devops`
+  * Directory: `0x04-loops_conditions_and_parsing`
+  * File: `102-lets_parse_apache_logs`
+
+### 14. Dig the data
+Now that you’ve parsed the Apache log file, let’s sort the data so you can get a better idea of what is going on. Using what you did in the previous exercise, write a Bash script that groups visitors by IP and HTTP status code, and displays this data.
+
+**Requirements**:
+
+  * The exact format must be:
+    * `OCCURENCE_NUMBER` `IP` `HTTP_CODE`
+    * In list format
+  * Ordered from the greatest to the lowest number of occurrences
+    * See example
+  * You must use `awk`
+  * You are not allowed to use `while`, `for`, `until` and `cut`
+```
+sylvain@ubuntu$ ./103-dig_the-data | head -n 10
+    141 130.0.236.153 200
+    140 62.210.250.66 200
+    117 103.243.26.232 404
+    67 195.154.172.143 200
+    60 78.154.190.29 200
+    45 195.154.172.59 200
+    41 62.210.248.185 200
+    41 167.114.156.198 200
+    36 2.1.201.36 304
+    36 195.154.172.53 200
+sylvain@ubuntu$
+```
+**Repo**:
+  * GitHub repository: `alx-system_engineering-devops`
+  * Directory: `0x04-loops_conditions_and_parsing`
+  * File: `103-dig_the-data`
