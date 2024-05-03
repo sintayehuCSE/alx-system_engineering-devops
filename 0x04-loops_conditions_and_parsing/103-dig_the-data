@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+# Parse Appache Web-Server access log file and print result
+# containing clients IP and http response code of the server with each
+# unique log being counted and displayed in descending order of accurence
+
+awk '{print $1 " " $9}' apache-access.log | sort | uniq -c | sort -nr
