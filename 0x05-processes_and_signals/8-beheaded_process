@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+# A bash script that will behead a process 7-highlander
+
+pkill --signal SIGKILL --full 7-highlander
+
+#kill -9 "$(pgrep -f 7-highlander)"
