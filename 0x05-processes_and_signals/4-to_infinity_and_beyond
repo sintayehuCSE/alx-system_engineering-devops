@@ -6,4 +6,3 @@ do
     echo "To infinity and beyond"
     sleep 2
 done
-trap "exit 0" SIGINT
