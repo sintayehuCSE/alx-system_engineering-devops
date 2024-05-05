@@ -256,3 +256,111 @@ I opened 2 terminals in this example, started by running my `4-to_infinity_and_b
   * GitHub repository: alx-system_engineering-devops
   * Directory: 0x05-processes_and_signals
   * File: 6-stop_me_if_you_can
+
+## 7. Highlander
+Write a Bash script that displays:
+  * `To infinity and beyond` indefinitely
+  * With a `sleep 2` in between each iteration
+  * `I am invincible!!!` when receiving a `SIGTERM` signal
+Make a copy of your `6-stop_me_if_you_can` script, name it `67-stop_me_if_you_can`, that kills the `7-highlander` process instead of the `4-to_infinity_and_beyond` one.
+
+Terminal #0
+```
+sylvain@ubuntu$ ./7-highlander
+To infinity and beyond
+To infinity and beyond
+I am invincible!!!
+To infinity and beyond
+I am invincible!!!
+To infinity and beyond
+To infinity and beyond
+To infinity and beyond
+I am invincible!!!
+To infinity and beyond
+^C
+sylvain@ubuntu$
+```
+Terminal #1
+```
+sylvain@ubuntu$ ./67-stop_me_if_you_can 
+sylvain@ubuntu$ ./67-stop_me_if_you_can
+sylvain@ubuntu$ ./67-stop_me_if_you_can
+sylvain@ubuntu$
+```
+I started `7-highlander` in Terminal #0 and then run `67-stop_me_if_you_can` in terminal #1, for every iteration we can see `I am invincible!!!` appearing in terminal #0.
+
+**Repo:**
+  * GitHub repository: `alx-system_engineering-devops`
+  * Directory: `0x05-processes_and_signals`
+  * File: `7-highlander`
+
+## 8. Beheaded process
+Write a Bash script that kills the process `7-highlander`.
+
+Terminal #0
+```
+sylvain@ubuntu$ ./7-highlander 
+To infinity and beyond
+To infinity and beyond
+To infinity and beyond
+To infinity and beyond
+Killed
+sylvain@ubuntu$
+```
+Terminal #1
+```
+sylvain@ubuntu$ ./8-beheaded_process
+sylvain@ubuntu$
+```
+I started `7-highlander` in Terminal #0 and then run `8-beheaded_process` in terminal #1 and we can see that the `7-highlander` has been killed.
+
+**Repo:**
+  * GitHub repository: `alx-system_engineering-devops`
+  * Directory: `0x05-processes_and_signals`
+  * File: `8-beheaded_process`
+
+## 9. Process and PID file
+**Write a Bash script that:**
+  * Creates the file `/var/run/myscript.pid` containing its `PID`
+  * Displays `To infinity and beyond` indefinitely
+  * Displays `I hate the kill command` when receiving a `SIGTERM` signal
+  * Displays `Y U no love me?!` when receiving a `SIGINT` signal
+  * Deletes the file `/var/run/myscript.pid` and terminates itself when receiving a `SIGQUIT` or `SIGTERM` signal
+
+![LOVE ME](images/LOVE_ME.jpg)
+```
+sylvain@ubuntu$ sudo ./100-process_and_pid_file
+To infinity and beyond
+To infinity and beyond
+^CY U no love me?!
+```
+Executing the `100-process_and_pid_file` script and killing it with `ctrl+c`.
+
+Terminal #0
+```
+sylvain@ubuntu$ sudo ./100-process_and_pid_file
+To infinity and beyond
+To infinity and beyond
+To infinity and beyond
+To infinity and beyond
+To infinity and beyond
+To infinity and beyond
+To infinity and beyond
+To infinity and beyond
+To infinity and beyond
+To infinity and beyond
+To infinity and beyond
+I hate the kill command
+sylvain@ubuntu$ 
+```
+Terminal #1
+```
+sylvain@ubuntu$ sudo pkill -f 100-process_and_pid_file
+sylvain@ubuntu$
+```
+Starting `100-process_and_pid_file` in the terminal #0 and then killing it in the terminal #1.
+
+**Repo:**
+  * GitHub repository: `alx-system_engineering-devops`
+  * Directory: `0x05-processes_and_signals`
+  * File: `100-process_and_pid_file`
