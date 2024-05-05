@@ -1,0 +1,32 @@
+#!/usr/bin/env bash
+# A Bash script that manage a process through /etc/init.d script
+
+if [ "${1}" != start ] && [ "${1}" != stop ] && [ "${1}" != restart ] || [ $# -eq 0 ]
+then
+    echo "Usage: manage_my_process {start|stop|restart}"
+fi
+daemonID=/var/run/my_process.pid
+start_daemon() {
+    ./manage_my_process &
+    echo "$!" > "$daemonID"
+}
+
+stop_daemon() {
+    sudo kill -15 "$(cat "$daemonID")" && rm -f "$daemonID"
+}
+case $1 in
+    start)
+	start_daemon
+	echo "manage_my_process started"
+	;;
+    stop)
+	stop_daemon
+	echo "manage_my_process stopped"
+	;;
+    restart)
+	stop_daemon
+	start_daemon
+	echo "manage_my_process restarted"
+	;;
+esac
+exit 0
