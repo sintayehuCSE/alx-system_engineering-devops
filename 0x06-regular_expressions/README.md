@@ -128,3 +128,48 @@ $
   * GitHub repository: `alx-system_engineering-devops`
   * Directory: `0x06-regular_expressions`
   * File: `4-repetition_token_3.rb`
+
+## 6. Call me maybe
+This task is brought to you by a professional advisor [Neha Jain](https://twitter.com/_nehajain), Senior Software Engineer at LinkedIn.
+
+**Requirement:**
+  * The regular expression must match a 10 digit phone number
+
+Example:
+```
+sylvain@ubuntu$ ./6-phone_number.rb 4155049898 | cat -e
+4155049898$
+sylvain@ubuntu$ ./6-phone_number.rb " 4155049898" | cat -e
+$
+sylvain@ubuntu$ ./6-phone_number.rb "415 504 9898" | cat -e
+$
+sylvain@ubuntu$ ./6-phone_number.rb "415-504-9898" | cat -e
+$
+sylvain@ubuntu$
+```
+**Repo:**
+  * GitHub repository: `alx-system_engineering-devops`
+  * Directory: `0x06-regular_expressions`
+  * File: `6-phone_number.rb`
+
+## 7. OMG WHY ARE YOU SHOUTING?
+
+![Shouting](images/shouting.JPG)
+
+**Requirement:**
+  * The regular expression must be only matching: capital letters
+
+Example:
+```
+sylvain@ubuntu$ ./7-OMG_WHY_ARE_YOU_SHOUTING.rb "I realLy hOpe VancouvEr posseSs Yummy Soft vAnilla Dupper Mint Ice Nutella cream" | cat -e
+ILOVESYSADMIN$
+sylvain@ubuntu$ ./7-OMG_WHY_ARE_YOU_SHOUTING.rb "WHAT do you SAY?" | cat -e
+WHATSAY$
+sylvain@ubuntu$ ./7-OMG_WHY_ARE_YOU_SHOUTING.rb "cannot read you" | cat -e
+$
+sylvain@ubuntu$
+```
+**Repo:**
+  * GitHub repository: `alx-system_engineering-devops`
+  * Directory: `0x06-regular_expressions`
+  * File: `7-OMG_WHY_ARE_YOU_SHOUTING.rb`
