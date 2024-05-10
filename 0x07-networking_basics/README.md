@@ -20,9 +20,9 @@
   * [What is ping /ICMP](https://en.wikipedia.org/wiki/Ping_%28networking_utility%29)
   * [Positional parameters](https://www.adminschoice.com/bash-positional-parameters)
 
-  **man or help:**
-    * `netstat`
-    * `ping`
+**man or help:**
+  * netstat
+  * ping
 ## Learning Objectives
 At the end of this project, you are expected to be able to e[xplain to anyone](https://fs.blog/feynman-learning-technique/), without the help of Google:
 ### OSI Model
