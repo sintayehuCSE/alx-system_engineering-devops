@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# A user-specific client-side configuration file
+Host *
+     PasswordAuthentication = no
+     IdentityFile = ~/.ssh/school
