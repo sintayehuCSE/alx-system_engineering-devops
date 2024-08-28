@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 # A bash script that create RSA key with specified bits in the specified file.
 
-ssh-keygen -t rsa -b 4096 -f school -P betty
+ssh-keygen -t rsa -b 4096 -f school -N betty
