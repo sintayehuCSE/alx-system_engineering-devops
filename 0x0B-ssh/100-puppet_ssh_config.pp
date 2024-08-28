@@ -2,10 +2,10 @@
 
 file_line { 'Turn off password auth':
   path => '/etc/ssh/ssh_config',
-  line => 'PasswordAuthentication = no'
+  line => 'PasswordAuthentication no'
 }
 
 file_line { 'Add Identity Key':
   path => '/etc/ssh/ssh_config',
-  line => 'IdentityFile = ~/.ssh/school'
+  line => 'IdentityFile ~/.ssh/school'
 }
