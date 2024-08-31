@@ -9,7 +9,7 @@
 
 apt-get -y update
 apt-get -y install nginx
-echo "Hello World!" > /var/www/htm/index.html
+echo "Hello World!" > /var/www/html/index.html
 printf %s "server {
     listen 80 default_server;
     listen [::]:80 default_server;
