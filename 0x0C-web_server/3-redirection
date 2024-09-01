@@ -25,6 +25,6 @@ printf %s "server {
 }" > /etc/nginx/sites-available/default
 new_config_line="server_name _;\n\trewrite \/redirect_me https:\/\/github.com\/sintayehuCSE permanent;"
 sed -i "s/server_name _;/${new_config_line}/" /etc/nginx/sites-available/default
-echo "https://github.com/sintayehuCSE" | tee /var/www/html
+echo "https://github.com/sintayehuCSE" | tee /var/www/html/redirect_me
 
 service nginx restart
