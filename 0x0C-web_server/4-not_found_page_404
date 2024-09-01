@@ -1,11 +1,5 @@
 #!/usr/bin/env bash
-# Web servers are the piece of software generating and serving HTML pages, let’s install one!
-# Requirements:
-# 1. Install nginx on your web-01 server
-# 2. Nginx should be listening on port 80
-# 3. When querying Nginx at its root / with a GET request (requesting a page) using curl, it must return a page that contains the string Hello World!
-# 4. As an answer file, write a Bash script that configures a new Ubuntu machine to respect above requirements (this script will be run on the server itself)
-# 5. You can’t use systemctl for restarting nginx
+# Wide system configuration script
 
 apt-get -y update
 apt-get -y install nginx
@@ -20,7 +14,7 @@ printf %s "server {
 }" > /etc/nginx/sites-available/default
 echo "https://github.com/sintayehuCSE" > /var/www/html/redirect_me
 new_config_line="server_name _;\n\trewrite ^\/redirect_me https:\/\/github.com\/sintayehuCSE permanent;"
-sed -i "s/server_name _;/${new_config_line}/" /etc/nginx/sites-enabled/default
+sudo sed -i "s/server_name _;/${new_config_line}/" /etc/nginx/sites-enabled/default
 new_cnfg_line="listen 80 default_server;\n\terror_page 404 \/404.html;\n\tlocation = \/404.html {\n\t\troot \/v\r\/www\/html;\n\t\tinternal;\n\t}"
 sudo sed -i "s/listen 80 default_server;/${new_cnfg_line}/" /etc/nginx/sites-available/default
 sudo echo "Ceci n'est pas une page" | sudo tee /var/www/html/404.html
