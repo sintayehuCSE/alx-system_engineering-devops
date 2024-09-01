@@ -17,6 +17,6 @@ apt-get -y install nginx
 echo "Hello World!" > /var/www/html/index.html
 echo "https://github.com/sintayehuCSE" | tee /var/www/html/redirect_me
 new_config_line="server_name _;\n\trewrite ^\/redirect_me https:\/\/github.com\/sintayehuCSE permanent;"
-sed -i "s/server_name _;/${new_config_line}/" /etc/nginx/sites-enabled/default
+sed -i "s/server_name _;/${new_config_line}/" /etc/nginx/sites-available/default
 
 service nginx restart
