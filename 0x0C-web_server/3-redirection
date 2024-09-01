@@ -6,15 +6,18 @@
 # 3. When querying Nginx at its root / with a GET request (requesting a page) using curl, it must return a page that contains the string Hello World!
 # 4. As an answer file, write a Bash script that configures a new Ubuntu machine to respect above requirements (this script will be run on the server itself)
 # 5. You can’t use systemctl for restarting nginx
-# Configure your Nginx server so that /redirect_me is redirecting to another page.
-# Requirements:
-
-# The redirection must be a “301 Moved Permanently”
-# You answer file should be a Bash script containing commands to automatically configure a Ubuntu machine to respect above requirements
 
 apt-get -y update
 apt-get -y install nginx
 echo "Hello World!" > /var/www/html/index.html
+printf %s "server {
+    listen 80 default_server;
+    listen [::]:80 default_server;
+
+    root /var/www/html;
+    index index.html index.htm index.nginx-debian.html;
+    server_name _;
+}" > /etc/nginx/sites-available/default
 echo "https://github.com/sintayehuCSE" > /var/www/html/redirect_me
 new_config_line="server_name _;\n\trewrite ^\/redirect_me https:\/\/github.com\/sintayehuCSE permanent;"
 sed -i "s/server_name _;/${new_config_line}/" /etc/nginx/sites-enabled/default
