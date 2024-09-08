@@ -3,6 +3,6 @@
 
 new_port="80 default_server"
 old_port="8080 default_server"
-sed -i "s/{$old_port}/{$new_port}/" /etc/nginx/sites-enabled/default
+sed -i "s/$old_port/$new_port/" /etc/nginx/sites-enabled/default
 
 service nginx restart
