@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+# Configure a brand new HAProxy load balancer to forward traffic to two pool memebers
+
+apt-get update
+apt-get -y install haproxy
+printf % "
+frontend hbnb-lb_front
+	 bind *:80
+	 mode http
+	 default_backend hbnb-lb_back
+backend hbnb-lb_back
+	balance roundrobin
+	mode http
+	server 39709-web-01 100.25.33.79:80 check
+	server 39709-web-02 34.227.101.79:80 check
+
+" >> /etc/haproxy/haproxy.cfg
+
+echo "ENABLED=1" >> /etc/default/haproxy
+
+service haproxy start
