@@ -1,0 +1,29 @@
+                                                           IMPORTANT NOTES
+===========================================================================================================================================
+	# You have to stop the running HAPRoxy instance before you start generating a certificate, otherwise
+	# Your certificate won't be generated
+
+sudo apt update
+sudo apt install snapd # IF not installed
+sudo apt-get purge certbot # if exits
+sudo apt-get remove certbot # If exists
+
+sudo apt-get install certbot
+sudo service haproxy stop
+
+sudo certbot certonly --standalone --preferred-challenges http --http-01-port 80 -d www.deliverashewa.tech
+	Congratulations! Your certificate and chain have been saved at:
+		/etc/letsencrypt/live/www.deliverashewa.tech/fullchain.pem 
+	Your key file has been saved at:
+		/etc/letsencrypt/live/www.deliverashewa.tech/privkey.pem
+
+sudo ls /etc/letsencrypt/live/www.deliverashewa.tech
+
+sudo mkdir -p /etc/haproxy/certs
+
+DOMAIN='www.deliverashewa.tech' sudo -E bash -c 'cat /etc/letsencrypt/live/$DOMAIN/fullchain.pem /etc/letsencrypt/live/$DOMAIN/privkey.pem > /etc/haproxy/certs/$DOMAIN.pem'
+
+sudo chmod -R go-rwx /etc/haproxy/certs/
+
+# Finally edit your HAProxy configuration file in /etc/haproxy/haproxy.cfg
+	sudo emacs /etc/haproxy/haproxy.cfg
