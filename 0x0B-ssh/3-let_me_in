@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
 # A Bash script to add public key to a remote host using ssh-copy-id command
 # Key = is a filename that contain your public key and should end with .pub
-ssh-copy-id -i key ubuntu@100.25.33.79
+# ssh-copy-id -i key ubuntu@100.25.33.79
+ssh-copy-id -i key ubuntu@34.227.101.79
