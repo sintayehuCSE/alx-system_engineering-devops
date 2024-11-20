@@ -26,7 +26,7 @@ Below is a list of categorized content for this project
 
 [Networking Basics Part 1](https://github.com/sintayehuCSE/alx-system_engineering-devops/tree/master/0x07-networking_basics)
 
-[Networkin Basics Part 2](https://github.com/sintayehuCSE/alx-system_engineering-devops/tree/master/0x08-networking_basics_2)
+[Networking Basics Part 2](https://github.com/sintayehuCSE/alx-system_engineering-devops/tree/master/0x08-networking_basics_2)
 
 [Web Infrastructure Design](https://github.com/sintayehuCSE/alx-system_engineering-devops/tree/master/0x09-web_infrastructure_design)
 
