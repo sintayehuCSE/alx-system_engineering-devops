@@ -24,7 +24,7 @@ Below is a list of categorized content for this project
 
 [Regular Expression](https://github.com/sintayehuCSE/alx-system_engineering-devops/tree/master/0x06-regular_expressions)
 
-[Networking Basics](https://github.com/sintayehuCSE/alx-system_engineering-devops/tree/master/0x07-networking_basics)
+[Networking Basics Part 1](https://github.com/sintayehuCSE/alx-system_engineering-devops/tree/master/0x07-networking_basics)
 
 [Networkin Basics Part 2](https://github.com/sintayehuCSE/alx-system_engineering-devops/tree/master/0x08-networking_basics_2)
 
