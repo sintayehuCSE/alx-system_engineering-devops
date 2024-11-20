@@ -113,20 +113,6 @@ Requirements
 Quiz questions
 --------------
 
-Show
-
-Your servers
-------------
-
-| Name | Username | IP | State |\
- |
-| --- | --- | --- | --- | --- |
-| 1723-web-01 | `ubuntu` | `100.26.181.86` | running |\
- |
-
-|\
- |
-
 Tasks
 -----
 
